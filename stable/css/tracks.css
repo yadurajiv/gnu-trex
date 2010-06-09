@@ -1,0 +1,107 @@
+  body {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS";
+	font-size:10px;
+	text-align:center;
+	background:url('../images/no_nonsense_tracking.png') no-repeat 0 0 ;
+  }
+  
+  #about {
+	background-color:#ff00ff;
+	position:absolute;
+	width:120px;
+	height:120px;
+	top:-100px;
+	left:30px;
+	text-align:center;
+  }
+  
+  #about_1 {
+	background-color:#ccff00;
+	position:absolute;
+	width:120px;
+	height:120px;
+	top:-100px;
+	left:180px;
+	text-align:center;
+  }
+  
+  #about_2 {
+	background-color:#ffee00;
+	position:absolute;
+	width:120px;
+	height:120px;
+	top:-100px;
+	left:330px;
+	text-align:center;
+  }
+  
+  #todo {
+	background-color:#c0c0c0;
+	position:absolute;
+	width:210px;
+	top:30px;
+	left:-200px;
+	text-align:left;
+	padding:5px;
+	font-size:12px;
+  }
+  
+  #tracks {
+	padding:22px;
+  }
+  
+  .task,
+  #controls {
+	width:640px;
+	margin:0 auto;
+	background-color:#e0e0e0;
+	text-align:center;
+	padding:10px 0;
+	border-bottom:2px #999 solid;
+  }
+  
+  .task {
+	font-size:2em;	
+	padding:0;
+	cursor:move;
+  }
+  
+  .task .desc {
+  }
+  
+  .task .tools {
+	background-color:#f0f0f0;
+	font-size:12px;
+	text-align:left;
+	margin:0;
+	margin-bottom:6px;
+	padding:6px;
+  }
+  
+  .task .tm {
+	background-color:#f0f0f0;
+	text-align:right;
+	margin:0;
+	margin-top:6px;
+	padding:6px;
+  }
+  
+  #controls textarea{
+	font-size:1.8em;
+	font-family:verdana;
+	margin:0 0 6px 0;
+  }
+  
+  #controls button{
+	font-size:2em;
+	font-family:verdana;
+	margin:0 0 6px 0;
+	height:60px;
+	color:#333;
+  }
+  
+  .cb {
+	clear:both;
+  }

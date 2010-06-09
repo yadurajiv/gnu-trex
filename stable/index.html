@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>t-racks | no nonsense tracking</title>
+<meta name="description" content="t-racks, no nonsense task time tracking device" />
+<meta name="keywords" content="time tracking, tracker, t-racks, trex, t-rex, management, time management, yadu, yadurajiv, yadu rajiv" />
+<meta name="author" content="Yadu Rajiv" />
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+<link href="css/tracks.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="about"><h1>t-racks</h1>*rwar* very basic alpha, use at your own risk! =^_^=</div>
+<div id="about_1"><h1>t-racks</h1>by<br /><a href="http://twitter.com/yadurajiv" target="_blank">yadu</a><br />=^_^=</div>
+<div id="about_2"><h1>t-racks</h1>Happy birthday <a href="http://twitter.com/kinshuksunil" target="_blank">kinz</a><br />=^_^=</div>
+<div id="todo">
+<h2>[initial alpha features]</h2>
+<ul>
+<li>simple task listing</li>
+<li>sortable tasks</li>
+<li>pause/resume individual tasks</li>
+<li>remove individual tasks</li>
+<li>pause/resume all active tasks</li>
+<li>fancy background logo</li>
+<li>added this list</li>
+</ul>
+
+<h2>[todo:next release]</h2>
+<ul>
+<li>printable report page with task and time taken for task</li>
+<li>edit task description once its written</li>
+<li>clear timer for individual tasks</li>
+<li>optimize js</li>
+<li>optimize css</li>
+<li>clock</li>
+<li>multiple task creation</li>
+</ul>
+
+<h2>[todo:later]</h2>
+<ul>
+<li>look into possible integration with project management tools like active collab, basecamp through respective APIs</li>
+<li>saving/loading task lists</li>
+<li>user accounts and saving tasks on db</li>
+</ul>
+<div class="social">
+<h2>Tweet about it or suggest a feature and RT ^_^</h2>
+<script type="text/javascript">
+tweetmeme_style = 'compact';
+tweetmeme_source = 'yadurajiv';
+</script>
+<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+</div>
+</div>
+<div id="tracks">
+<div id="controls">
+	<textarea id="taskDesc" rows="4" cols="60">wasting time!</textarea>
+	<button id="addTask" onclick="addTask();">Add Task</button>
+	<button id="pauseTasks" onclick="pauseTasks(this);">Pause All Tasks</button>
+	<div class="cb"></div>
+</div>
+<div id="tasks">
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.1.custom.min.js"></script>
+<script type="text/javascript" src="js/trex.min.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16768424-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>
+

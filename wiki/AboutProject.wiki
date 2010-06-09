@@ -27,4 +27,4 @@ No Nonsense Tracking
   * Source Code licensed under GNU General Public License v3 [http://www.gnu.org/licenses/gpl.html]
   * Project Content licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
   * Used by You
-- kthnxbai
+- kthxbai

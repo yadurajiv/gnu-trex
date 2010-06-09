@@ -2,7 +2,7 @@
 #labels Featured
 
 = Introduction =
-gnu-trex 
+t-racks 
 
 
 = Details =
@@ -15,16 +15,16 @@ Extremely Early Alpha Release x.x.x
 No Nonsense Tracking
 
 ==Contribute==
-  * Upcoming Features [http://code.google.com/p/gnu-trex/issues/list?can=2&q=label:Type-Enhancement]
-  * Request a Feature [http://code.google.com/p/gnu-trex/issues/entry]
-  * Fix Bugs [http://code.google.com/p/gnu-trex/issues/list?can=2&q=label:Type-Defect&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary&cells=tiles]
-  * Submit Bug Report [http://code.google.com/p/gnu-trex/issues/entry]
-  * Tweet About gnu-trex [Tweet Plugin here]
+* Upcoming Features [http://code.google.com/p/t-racks/issues/list?can=2&q=label:Type-Enhancement]
+* Request a Feature [http://code.google.com/p/t-racks/issues/entry]
+* Fix Bugs [http://code.google.com/p/t-racks/issues/list?can=2&q=label:Type-Defect&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary&cells=tiles]
+* Submit Bug Report [http://code.google.com/p/t-racks/issues/entry]
+* Tweet About t-racks [Tweet Plugin here]
 
 ==Credits==
-  * Developed by the gnu-trex team [http://code.google.com/p/gnu-trex/people/list]
-  * Hosted on Google Code [http://code.google.com/p/gnu-trex/]
-  * Source Code licensed under GNU General Public License v3 [http://www.gnu.org/licenses/gpl.html]
-  * Project Content licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
-  * Used by You
-- kthxbai
+* Developed by the t-racks team [http://code.google.com/p/t-racks/people/list]
+* Hosted on Google Code [http://code.google.com/p/t-racks/]
+* Source Code licensed under GNU General Public License v3 [http://www.gnu.org/licenses/gpl.html]
+* Project Content licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
+* Used by You
+- kthnxbai

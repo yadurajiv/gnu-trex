@@ -1,0 +1,16 @@
+#summary Discussion on changing the name of the project
+#labels Featured,Phase-Design
+
+= Introduction =
+Discuss the name of the project "t-racks" and see what other options we have here.
+
+
+== Issue with Current Name ==
+
+The name T-RackS (http://www.ikmultimedia.com/t-racks/features/) is a registered trademark of IK Multimedia and we might be under a potential copyright violation if we use the name. So the better option will be to use a name that doesnt exist yet.
+
+== Name Suggestions ==
+Submit name suggestions here in the format: *[Name]: [Meaning]*, where
+*Name* is the suggested name for the project and *Meaning* is the meaning implied by the name, if it does mean anything.
+
+# *'gnu-trex'*: T-Rex + Play on "tracks", licensed under the GNU GPL 3 License

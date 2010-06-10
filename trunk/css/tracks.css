@@ -1,4 +1,22 @@
-  body {
+/*!
+ * gnu-trex [http://code.google.com/p/gnu-trex/]
+ *
+ * Copyright 2010, gnu-trex team [as listed on the people page of the google code project site]
+ * Source Code licensed under the GPL Version 3 [http://www.gnu.org/licenses/gpl.html]
+ * Project Content & Documentation licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
+ *
+ * Includes jQuery.js [http://jquery.com/]
+ * Copyright 2010, John Resig
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Includes jQuery UI 1.8.1 [http://docs.jquery.com/UI]
+ * Copyright (c) 2010 AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and GPL (GPL-LICENSE.txt) licenses.
+ * 
+ */
+ 
+ body {
     padding:0;
     margin:0;
     font-family:"Trebuchet MS";

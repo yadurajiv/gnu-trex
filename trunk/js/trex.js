@@ -53,6 +53,7 @@
         tracks:[],
 		t: '',
 		idc:0,
+		size:0,
 		
 		init: function(c) {
 			this.callback = c;
@@ -88,12 +89,14 @@
 			
 			this.tracks[tmp.id] = tmp;
 			this.idc++;
+			this.size++;
 			return tmp.id;
 		},
 
 	   remove:function(id) {
 			try {
 				delete this.tracks[id];
+				this.size--;
 			}catch(err) {
 			}
 	   },

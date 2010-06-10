@@ -82,10 +82,11 @@ var rndTask = [
   }
   
   function cb() {
-	if(!paused) {
-		r.update();
-		var tmp;
-		for(tmp in r.tracks) {
+	r.update();
+	var tmp;
+	for(tmp in r.tracks) {
+		if(r.tracks[tmp].state == 'active') {
+		
 			var t = r.tracks[tmp].s;
 			
 			var hr = Math.floor(t / 3600);
@@ -99,7 +100,6 @@ var rndTask = [
 			$("#"+tmp+" div.tm").html(hr+":"+min+":"+sec);
 		}
 	}
-	
   }
 
   $(document).ready(function() {
@@ -117,48 +117,69 @@ var rndTask = [
   }
   
   function pauseTasks() {
+  
+  if(!r.size) return;
+  
+  var tmp;
+  
 	if(paused) {
 		paused = false;
-		$("#pauseTasks").html("Pause Active Tasks");
+		$("#pauseTasks").html("Pause All Tasks");
+		for(tmp in r.tracks) {
+			r.tracks[tmp].state = 'active';
+			$("#"+tmp+" .taskTmrToggle").html("P");
+		}
 	} else {
 		paused = true
-		$("#pauseTasks").html("Resume Active Tasks");
+		$("#pauseTasks").html("Resume All Tasks");
+		for(tmp in r.tracks) {
+			r.tracks[tmp].state = 'paused';
+			$("#"+tmp+" .taskTmrToggle").html("R");
+		}
 	}
   }
   
   function toggleTask(tid) {
 	if(r.state(tid) == 'paused') {
-		$("#"+tid+" .taskTmrToggle").html("R");
-	} else {
 		$("#"+tid+" .taskTmrToggle").html("P");
+	} else {
+		$("#"+tid+" .taskTmrToggle").html("R");
 	}
 	r.toggle(tid);
+	
   }
   
   function removeTask(tid) {
+	if(r.size == 1 && paused) {
+		pauseTasks();
+	}
 	r.remove(tid);
 	$("#"+tid).slideUp(500, function() { $(this).remove(); });
   }
   
   function saveTasks() {
-	$("#taskDesc").val(r.save());
+	if(r.size > 0) { /* should the size variable be a function that calculates the number of items in the associative array r.tracks? */
+		$("#taskDesc").val(r.save());
+	}
   }
   
-  function loadTasks() {
-	var i,obj,arrObj,tmp;
+  function loadTasks() {  
+	loadTask($("#taskDesc").val());
+  }
   
-	obj = $("#taskDesc").val();
+  function loadTask(task) {
+	var i,arrObj,tmp;
 	
-	if(undefined != obj && "string" == typeof(obj)) {
+	if(undefined != task && "string" == typeof(task)) {
 		try {
-			arrObj = eval(obj);
+			arrObj = eval(task);
 			
 			for(i in arrObj) {
 				tmp = r.add(arrObj[i].title,arrObj[i].s,arrObj[i].state);
-				$("#tasks").append("<div class=\"task\" id=\""+tmp+"\"><div class=\"tools\"><button class=\"taskTmrToggle\" onclick=\"toggleTask(\'"+tmp+"\');\">Pause</button><button class=\"taskRemove\" onclick=\"removeTask(\'"+tmp+"\');\">Remove</button></div><div class=\"desc\">"+unescape(arrObj[i].title)+"</div><div class=\"tm\">00:00:00</div><div class=\"cb\"></div></div>"); /* unescape when loading */
+				$("#tasks").append("<div class=\"task\" id=\""+tmp+"\"><div class=\"tools\"><button class=\"taskTmrToggle\" onclick=\"toggleTask(\'"+tmp+"\');\" title=\"Pause\"><span>P</span></button><button class=\"taskRemove\" onclick=\"removeTask(\'"+tmp+"\');\" title=\"Delete\"><span>D</span></button></div><div class=\"desc\">"+unescape(arrObj[i].title)+"</div><div class=\"tm\">00:00:00</div><div class=\"cb\"></div></div>");
 				$("#tasks").sortable();
 				$("#taskDesc").val(rndTask[(Math.round(Math.random() * rndTask.length))]);	
-				$("#"+tmp+" .taskTmrToggle").html((arrObj[i].state!="active")?"Resume":"Pause");
+				$("#"+tmp+" .taskTmrToggle").html((arrObj[i].state!="active")?"R":"P");
 				$("#"+tmp).slideDown(500);
 			}
 			return true;
@@ -168,6 +189,5 @@ var rndTask = [
 			return false;
 		} 
 	}
-	
-	return false;
-}
+  return false;
+  }

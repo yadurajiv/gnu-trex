@@ -71,7 +71,7 @@
   }
   
   #tracks {
-	padding:22px;
+	padding:32px;
   }
   
   .task,
@@ -82,8 +82,6 @@
 	text-align:center;
 	padding:10px 0 0;
 	cursor:move;
-	top:10px;
-	left:10px;
   }
   
   .task {

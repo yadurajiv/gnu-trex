@@ -1,10 +1,28 @@
-  body {
+/*!
+ * gnu-trex [http://code.google.com/p/gnu-trex/]
+ *
+ * Copyright 2010, gnu-trex team [as listed on the people page of the google code project site]
+ * Source Code licensed under the GPL Version 3 [http://www.gnu.org/licenses/gpl.html]
+ * Project Content & Documentation licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
+ *
+ * Includes jQuery.js [http://jquery.com/]
+ * Copyright 2010, John Resig
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Includes jQuery UI 1.8.1 [http://docs.jquery.com/UI]
+ * Copyright (c) 2010 AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and GPL (GPL-LICENSE.txt) licenses.
+ * 
+ */
+ 
+ body {
     padding:0;
     margin:0;
     font-family:"Trebuchet MS";
 	font-size:10px;
-	text-align:center;
-	background:url('../images/no_nonsense_tracking.png') no-repeat 0 0 ;
+	/* text-align:center; */
+	background:url('../images/no_nonsense_tracking.png') no-repeat 640px 0 ; 
   }
   
   #about {
@@ -15,6 +33,7 @@
 	top:-100px;
 	left:30px;
 	text-align:center;
+	z-index:999;
   }
   
   #about_1 {
@@ -25,6 +44,7 @@
 	top:-100px;
 	left:180px;
 	text-align:center;
+	z-index:999;
   }
   
   #about_2 {
@@ -35,6 +55,7 @@
 	top:-100px;
 	left:330px;
 	text-align:center;
+	z-index:999;
   }
   
   #todo {
@@ -46,46 +67,56 @@
 	text-align:left;
 	padding:5px;
 	font-size:12px;
+	z-index:999;
   }
   
   #tracks {
-	padding:22px;
+	padding:32px;
   }
   
   .task,
   #controls {
 	width:640px;
-	margin:0 auto;
+	/*margin:0 auto;*/
 	background-color:#e0e0e0;
 	text-align:center;
-	padding:10px 0;
-	border-bottom:2px #999 solid;
+	padding:10px 0 0;
+	cursor:move;
   }
   
   .task {
 	font-size:2em;	
 	padding:0;
-	cursor:move;
+	display:none;
+	border-top:1px #333 solid;
+	text-align:left;
   }
   
   .task .desc {
+	display:inline-block;
+	overflow:hidden;
+	text-align:left;
+	padding:6px;
+	font-size:0.8em;
   }
   
   .task .tools {
-	background-color:#f0f0f0;
+	/*background-color:#f0f0f0;*/
 	font-size:12px;
 	text-align:left;
 	margin:0;
-	margin-bottom:6px;
+	margin-right:4px;
 	padding:6px;
+	float:left;
   }
   
   .task .tm {
-	background-color:#f0f0f0;
+	/*background-color:#f0f0f0;*/
 	text-align:right;
 	margin:0;
-	margin-top:6px;
+	margin-left:4px;
 	padding:6px;
+	float:right;
   }
   
   #controls textarea{
@@ -100,6 +131,22 @@
 	margin:0 0 6px 0;
 	height:60px;
 	color:#333;
+  }
+  
+  #controls .task button {
+	height:auto;
+	font-size:1em;
+	font-family:verdana;
+	margin:2px;
+	color:#333;
+  }
+  
+  #msg {
+	display:none;
+	background-color:#333;
+	color:#fff;
+	width:120px;
+	height:60px;
   }
   
   .cb {

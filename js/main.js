@@ -34,7 +34,7 @@ var rndTask = [
 	r = new rex("cb()");
 	paused = false;
 	
-	$("#controls").draggable();
+	/* $("#gnutrex").draggable(); */
 	
 	$("#about").hover(
 		function(){

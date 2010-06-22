@@ -25,39 +25,6 @@
 	background:url('../images/no_nonsense_tracking.png') no-repeat 640px 0 ; 
   }
   
-  #about {
-	background-color:#ff00ff;
-	position:absolute;
-	width:120px;
-	height:120px;
-	top:-100px;
-	left:30px;
-	text-align:center;
-	z-index:999;
-  }
-  
-  #about_1 {
-	background-color:#ccff00;
-	position:absolute;
-	width:120px;
-	height:120px;
-	top:-100px;
-	left:180px;
-	text-align:center;
-	z-index:999;
-  }
-  
-  #about_2 {
-	background-color:#ffee00;
-	position:absolute;
-	width:120px;
-	height:120px;
-	top:-100px;
-	left:330px;
-	text-align:center;
-	z-index:999;
-  }
-  
   #todo {
 	background-color:#c0c0c0;
 	position:absolute;
@@ -70,20 +37,36 @@
 	z-index:999;
   }
   
-  #tracks {
-	padding:22px;
+  #gnutrex {
+	height:400px;
+	width:640px;
+	background-color:#f0f0f0;
+	position:relative;
+	/*cursor:move;*/
+	overflow:hidden;
+	text-align:left;
+  }
+  
+  #tasks {
+	height:360px;
+	overflow:auto;
   }
   
   .task,
   #controls {
-	width:640px;
+	width:600px;
 	/*margin:0 auto;*/
 	background-color:#e0e0e0;
 	text-align:center;
 	padding:10px 0 0;
-	cursor:move;
-	top:10px;
-	left:10px;
+	/*cursor:move;*/
+  }
+  
+  #controls {
+	left:0;
+	bottom:0;
+	position:absolute;
+	text-align:left;
   }
   
   .task {
@@ -92,6 +75,7 @@
 	display:none;
 	border-top:1px #333 solid;
 	text-align:left;
+	cursor:move;*/
   }
   
   .task .desc {
@@ -128,10 +112,12 @@
   }
   
   #controls button{
-	font-size:2em;
+	font-size:1em;
 	font-family:verdana;
+	/*
 	margin:0 0 6px 0;
 	height:60px;
+	*/
 	color:#333;
   }
   

@@ -1,21 +1,3 @@
-/*!
- * gnu-trex [http://code.google.com/p/gnu-trex/]
- *
- * Copyright 2010, gnu-trex team [as listed on the people page of the google code project site]
- * Source Code licensed under the GPL Version 3 [http://www.gnu.org/licenses/gpl.html]
- * Project Content & Documentation licensed under Creative Commons 3.0 BY-SA [http://creativecommons.org/licenses/by-sa/3.0/]
- *
- * Includes jQuery.js [http://jquery.com/]
- * Copyright 2010, John Resig
- * Dual licensed under the MIT or GPL Version 2 licenses.
- *
- * Includes jQuery UI 1.8.1 [http://docs.jquery.com/UI]
- * Copyright (c) 2010 AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT (MIT-LICENSE.txt)
- * and GPL (GPL-LICENSE.txt) licenses.
- * 
- */
-
 var r;
 var paused = true;
 
@@ -34,35 +16,6 @@ var rndTask = [
 	r = new rex("cb()");
 	paused = false;
 	
-	$("#controls").draggable();
-	
-	$("#about").hover(
-		function(){
-			$(this).animate({top:0},500);
-		},
-		function(){
-			$(this).animate({top:-100},500);
-		}
-	);
-	
-	$("#about_1").hover(
-		function(){
-			$(this).animate({top:0},500);
-		},
-		function(){
-			$(this).animate({top:-100},500);
-		}
-	);
-	
-	$("#about_2").hover(
-		function(){
-			$(this).animate({top:0},500);
-		},
-		function(){
-			$(this).animate({top:-100},500);
-		}
-	);
-	
 	$("#todo").hover(
 		function(){
 			$(this).animate({left:0},500);
@@ -76,9 +29,6 @@ var rndTask = [
 		return "All tasks you have created will be lost, are you sure you want to quit t-racks?";
 	};
 	
-	window.onunload = function() {
-		// clean up
-	}
   }
   
   function cb() {
@@ -103,15 +53,12 @@ var rndTask = [
   }
 
   $(document).ready(function() {
-
 	init();
-
   }); 
   
   function addTask() {
 	var tmp = r.add(escape($("#taskDesc").val())); /* escape when saving */
 	$("#tasks").append("<div class=\"task\" id=\""+tmp+"\"><div class=\"tools\"><button class=\"taskTmrToggle\" onclick=\"toggleTask(\'"+tmp+"\');\" title=\"Pause\"><span>P</span></button><button class=\"taskRemove\" onclick=\"removeTask(\'"+tmp+"\');\" title=\"Delete\"><span>D</span></button></div><div class=\"desc\">"+$("#taskDesc").val()+"</div><div class=\"tm\">00:00:00</div><div class=\"cb\"></div></div>");
-	$("#tasks").sortable();
 	$("#taskDesc").val(rndTask[(Math.round(Math.random() * rndTask.length))]);	
 	$("#"+tmp).slideDown(500);
   }
@@ -177,7 +124,6 @@ var rndTask = [
 			for(i in arrObj) {
 				tmp = r.add(arrObj[i].title,arrObj[i].s,arrObj[i].state);
 				$("#tasks").append("<div class=\"task\" id=\""+tmp+"\"><div class=\"tools\"><button class=\"taskTmrToggle\" onclick=\"toggleTask(\'"+tmp+"\');\" title=\"Pause\"><span>P</span></button><button class=\"taskRemove\" onclick=\"removeTask(\'"+tmp+"\');\" title=\"Delete\"><span>D</span></button></div><div class=\"desc\">"+unescape(arrObj[i].title)+"</div><div class=\"tm\">00:00:00</div><div class=\"cb\"></div></div>");
-				$("#tasks").sortable();
 				$("#taskDesc").val(rndTask[(Math.round(Math.random() * rndTask.length))]);	
 				$("#"+tmp+" .taskTmrToggle").html((arrObj[i].state!="active")?"R":"P");
 				$("#"+tmp).slideDown(500);

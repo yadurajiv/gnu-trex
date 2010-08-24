@@ -1,97 +1,13 @@
- body {
-    padding:0;
-    margin:0;
-    font-family:"Trebuchet MS";
-	font-size:10px;
-  }
-  
-  #todo {
-	background-color:#c0c0c0;
-	position:absolute;
-	width:210px;
-	top:30px;
-	left:-200px;
-	text-align:left;
-	padding:5px;
-	font-size:12px;
-	z-index:999;
-  }
-  
-  #tracks {
-	padding:32px;
-  }
-  
-  .task,
-  #controls {
-	width:640px;
-	background-color:#e0e0e0;
-	text-align:center;
-	padding:10px 0 0;
-  }
-  
-  .task {
-	font-size:2em;	
-	padding:0;
-	display:none;
-	border-top:1px #333 solid;
-	text-align:left;
-  }
-  
-  .task .desc {
-	display:inline-block;
-	overflow:hidden;
-	text-align:left;
-	padding:6px;
-	font-size:0.8em;
-  }
-  
-  .task .tools {
-	font-size:12px;
-	text-align:left;
-	margin:0;
-	margin-right:4px;
-	padding:6px;
-	float:left;
-  }
-  
-  .task .tm {
-	text-align:right;
-	margin:0;
-	margin-left:4px;
-	padding:6px;
-	float:right;
-  }
-  
-  #controls textarea{
-	font-size:1.8em;
-	font-family:verdana;
-	margin:0 0 6px 0;
-  }
-  
-  #controls button{
-	font-size:2em;
-	font-family:verdana;
-	margin:0 0 6px 0;
-	height:60px;
-	color:#333;
-  }
-  
-  #controls .task button {
-	height:auto;
-	font-size:1em;
-	font-family:verdana;
-	margin:2px;
-	color:#333;
-  }
-  
-  #msg {
-	display:none;
-	background-color:#333;
-	color:#fff;
-	width:120px;
-	height:60px;
-  }
-  
-  .cb {
-	clear:both;
-  }
+body{padding:0;margin:0;font-family:"Trebuchet MS";font-size:10px;}
+#todo{background-color:#c0c0c0;	position:absolute;width:210px;top:30px;left:-200px;text-align:left;padding:5px;font-size:12px;z-index:999;}
+#tracks{padding:32px;}
+.task,#controls{width:640px;background-color:#e0e0e0;text-align:center;padding:10px 0 0;}
+.task {font-size:2em;padding:0;display:none;	border-top:1px #333 solid;text-align:left;}
+.task .desc{display:inline-block;overflow:hidden;text-align:left;padding:6px;font-size:0.8em;}
+.task .tools{font-size:12px;text-align:left;margin:0;margin-right:4px;padding:6px;float:left;}
+.task .tm{text-align:right;margin:0;margin-left:4px;padding:6px;float:right;}
+#controls textarea{font-size:1.8em;font-family:verdana;margin:0 0 6px 0;}
+#controls button{font-size:2em;font-family:verdana;margin:0 0 6px 0;height:60px;color:#333;}
+#controls .task button{height:auto;font-size:1em;font-family:verdana;margin:2px;color:#333;}
+#msg{display:none;background-color:#333;color:#fff;width:120px;height:60px;}
+.cb{clear:both;}

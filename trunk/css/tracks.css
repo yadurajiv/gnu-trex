@@ -73,9 +73,14 @@
   #tracks {
 	padding:32px;
   }
+.controls {
+	border: medium solid #666;
+	width:300px;	
+}
+
   
   .task,
-  #controls {
+  .controls {
 	width:640px;
 	/*margin:0 auto;*/
 	background-color:#e0e0e0;
@@ -119,13 +124,17 @@
 	float:right;
   }
   
-  #controls textarea{
+  .controls textarea{
 	font-size:1.8em;
 	font-family:verdana;
-	margin:0 0 6px 0;
+	width:550px;
+	height:90px;
   }
+  #taskDesc{
+	resize: none;  
+	}
   
-  #controls button{
+  .controls button{
 	font-size:2em;
 	font-family:verdana;
 	margin:0 0 6px 0;
@@ -133,7 +142,7 @@
 	color:#333;
   }
   
-  #controls .task button {
+  .controls .task button {
 	height:auto;
 	font-size:1em;
 	font-family:verdana;
@@ -151,4 +160,6 @@
   
   .cb {
 	clear:both;
-  }
+  }.main {
+	border: 2px solid #000;
+}

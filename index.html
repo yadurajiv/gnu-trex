@@ -65,18 +65,17 @@ tweetmeme_source = 'yadurajiv';
 </p>
 </div>
 <div id="tracks">
-<div id="controls">
+<div class="controls">
 	<textarea id="taskDesc" rows="4" cols="60">wasting time!</textarea>
-	<button id="addTask" onclick="addTask();">Add Task</button>
-	<button id="pauseTasks" onclick="pauseTasks(this);">Pause All Tasks</button>
-	<button id="saveTasks" onclick="saveTasks(this);">Save</button>
-	<button id="loadTasks" onclick="loadTasks(this);">Load</button>
+	<button id="addTask" accesskey="a" onclick="addTask();">Add Task</button>
+	<button id="pauseTasks" accesskey="p" onclick="pauseTasks();" name="pause">Pause</button>
+	<button id="saveTasks" accesskey="s" onclick="saveTasks(this);">Save</button>
+	<button id="loadTasks" accesskey="l" onclick="loadTasks(this);">Load</button>
 	<div class="cb"></div>
 	<div id="tasks"></div>
 	<div id="msg"></div>
 </div>
 </div>
-
 </body>
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.1.custom.min.js"></script>

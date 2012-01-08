@@ -31,6 +31,7 @@
 <meta name="author" content="GNU-Trex Team" />
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 <link href="css/tracks.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -65,15 +66,20 @@ tweetmeme_source = 'yadurajiv';
 </p>
 </div>
 <div id="tracks">
-<div class="controls">
-	<textarea id="taskDesc" rows="4" cols="60">wasting time!</textarea>
-	<button id="addTask" accesskey="a" onclick="addTask();">Add Task</button>
-	<button id="pauseTasks" accesskey="p" onclick="pauseTasks();" name="pause">Pause</button>
-	<button id="saveTasks" accesskey="s" onclick="saveTasks(this);">Save</button>
-	<button id="loadTasks" accesskey="l" onclick="loadTasks(this);">Load</button>
+<div align="center" class="controls" style="left: 13px; top: 22px;">
+	<!--<textarea id="taskDesc" rows="4" cols="60">wasting time!</textarea>-->
+    <div class="flexcroll">
 	<div class="cb"></div>
 	<div id="tasks"></div>
 	<div id="msg"></div>
+    </div>
+    <input type="text" id="taskDesc" value="wasting time!"/>
+    <div class="buttons">
+    <button id="addTask" accesskey="a" onclick="addTask();">Add</button>
+    <button id="pauseTasks" accesskey="p" onclick="pauseTasks();" name="pause">Pause All Tasks</button>
+	<button id="saveTasks" accesskey="s" onclick="saveTasks(this);">Save</button>
+	<button id="loadTasks" accesskey="l" onclick="loadTasks(this);">Load</button>
+    </div>
 </div>
 </div>
 </body>
